@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" href="spotifyStyle.css">
+</head>
+
+<body>
+    <div class="leftblock " id="leftblock">
+        <div class="Home">
+            <ul>
+                <li><img src="logo.png">Spotify</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="house" height="35px" width="35px">
+                        <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="16"
+                            d="M151.99414,207.99263v-48.001a8,8,0,0,0-8-8h-32a8,8,0,0,0-8,8v48.001a8,8,0,0,1-7.999,8l-47.99414.00632a8,8,0,0,1-8.001-8v-92.4604a8,8,0,0,1,2.61811-5.91906l79.9945-72.73477a8,8,0,0,1,10.76339-.00036l80.0055,72.73509A8,8,0,0,1,216,115.53887V207.999a8,8,0,0,1-8.001,8l-48.00586-.00632A8,8,0,0,1,151.99414,207.99263Z">
+                        </path>
+                    </svg>Home</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search" height="35px" width="35px">
+                        <g data-name="Layer 2">
+                            <path stroke="white"
+                                d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"
+                                data-name="search"></path>
+                        </g>
+                    </svg>Search</li>
+            </ul>
+        </div>
+        <div class="library">
+            <nav class="head"><span>Your library</span><span>+</span></nav>
+            <div class="explore">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="footer">
+                <span>Legal</span>
+                <span>Privacy Center</span>
+                <span> Privacy Policy</span>
+                <span>About Ads</span>
+                <span>Cookies</span>
+            </div>
+            <button class="lang">English</button>
+        </div>
+
+    </div>
+    <div class="rightblock">
+        <div class="container">
+            <nav class="navbar">
+                <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+                <span> <svg class="svg-icon__arrow--left" viewBox="0 0 7 12" height="30px" width="14px"
+                        preserveAspectRatio="MinYMin" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#9d9d9d" fill-rule="evenodd"
+                            d="M.107 6.033c0 .268.107.524.295.713l4.874 4.884c.394.394 1.032.394 1.424 0 .394-.394.394-1.033 0-1.427l-4.162-4.17L6.7 1.863c.394-.394.394-1.033 0-1.427-.392-.394-1.03-.394-1.424 0L.402 5.32c-.188.19-.295.445-.295.713z" />
+                    </svg>
+                    <svg class="svg-icon__arrow--right" viewBox="0 0 7 12" height="30px" width="14px"
+                        preserveAspectRatio="MinYMin" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#9d9d9d" fill-rule="evenodd"
+                            d="M6.893 5.967c0-.268-.107-.524-.295-.713L1.724.37C1.33-.024.692-.024.3.37c-.394.394-.394 1.033 0 1.427l4.162 4.17L.3 10.137c-.394.394-.394 1.033 0 1.427.392.394 1.03.394 1.424 0L6.598 6.68c.188-.19.295-.445.295-.713z" />
+                    </svg>
+                </span>
+                <span><button class="si">Sign Up</button>
+                    <button class="bt">Log In</button></span>
+            </nav>
+            <div class="scrollbox">
+                <nav>Spotify Playlist</nav>
+                <div class="cardCollection">
+
+
+                    <div class=" Cards">
+                        <img src="images.jpg" alt=" Album image">
+                        <div class="play">
+                            <img src="playbtn.png">
+                        </div>
+                        <h3>Album Name</h3>
+                        <h5>Description</h5>
+                    </div>
+                    <div class=" Cards">
+                        <img src="images.jpg" alt=" Album image">
+                        <div class="play">
+                            <img src="playbtn.png">
+                        </div>
+                        <h3>Album Name</h3>
+                        <h5>Description</h5>
+                    </div>
+                    <div class=" Cards">
+                        <img src="images.jpg" alt=" Album image">
+                        <div class="play">
+                            <img src="playbtn.png">
+                        </div>
+                        <h3>Album Name</h3>
+                        <h5>Description</h5>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="player">
+                <div class="musiccontrol">
+                    <span class="songinfo">song name</span>
+                    <span>
+                        <img id="previous" src="SVGs/previous.svg" alt="Previous">
+                        <img id="play-pause" src="SVGs/play.svg" alt="Play/Pause">
+                        <img id="next" src="SVGs/next.svg" alt="Next">
+                    </span>
+                    <span class="songtime"></span>
+                </div>
+                <div class="load">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="ss.js"></script>
+
+</html>
