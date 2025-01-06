@@ -2,7 +2,7 @@ function Navbar() {
     return (
         <>
             <div>
-                <div className="flex justify-between items-center w-full  bg-white p-4 px-8 rounded shadow">
+                <div className="flex justify-between items-center w-full  bg-white p-4 px-8 rounded-lg shadow">
                     <div className="flex items-center space-x-8">
                         <span className="text-xl font-bold">Logo</span>
                         <nav className="flex space-x-4">

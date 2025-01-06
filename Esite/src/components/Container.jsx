@@ -1,8 +1,17 @@
+import ProductCard from "./ProductCard";
+
 function Container() {
     return (
         <>
-            <div className="w-3/4 h-full bg-red-400 p-4 rounded">
-                Right Part
+            <div className="flex flex-wrap justify-center gap-10 w-3/4 h-5/6 py-10 ">
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
             </div>
         </>
     );

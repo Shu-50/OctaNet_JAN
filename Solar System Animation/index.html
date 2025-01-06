@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Solar System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="title"><h1>Solar System</h1></div>
+    <div class="wrapper">
+      <div id="info-modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+          <div id="planet-info">
+            <h2>Select a Planet</h2>
+            <p>Click on a planet to learn more about it!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="neptune-container" onclick="showPlanetInfo('Neptune')">
+        <img src="img/neptune.png" />
+      </div>
+      <div class="uranus-container" onclick="showPlanetInfo('Uranus')">
+        <img src="img/uranus.svg" />
+      </div>
+      <div class="saturn-container" onclick="showPlanetInfo('Saturn')">
+        <img src="img/saturn.png" />
+      </div>
+      <div class="jupiter-container" onclick="showPlanetInfo('Jupiter')">
+        <img src="img/jupiter.png" />
+      </div>
+      <div class="mars-container" onclick="showPlanetInfo('Mars')">
+        <img src="img/mars.png" />
+      </div>
+      <div class="earth-container" onclick="showPlanetInfo('Earth')">
+        <img src="img/earth.png" />
+      </div>
+      <div class="venus-container" onclick="showPlanetInfo('Venus')">
+        <img src="img/venus.png" />
+      </div>
+      <div class="mercury-container" onclick="showPlanetInfo('Mercury')">
+        <img src="img/mercury.png" />
+      </div>
+      <div class="sun-container" onclick="showPlanetInfo('Sun')">
+        <img src="img/sun.png" />
+      </div>
+      
+      <div class="constellation-box">
+        <h2>Constellations</h2>
+        <input type="text" id="search-bar" placeholder="Search Constellations...">
+        <ul id="constellation-list">
+          <!-- List of constellations will go here -->
+        </ul>
+        
+          
+        
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,520 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.wrapper {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.neptune-container {
+   position: absolute;
+   height: 850px;
+   width: 850px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;   
+}
+
+.neptune-container > img {
+height: 50px;
+width: 50px;
+animation: neptune-rotation 53954ms linear infinite;
+}
+
+.uranus-container {
+   position: absolute;
+   height: 750px;
+   width: 750px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;   
+}
+
+.uranus-container > img {
+   height: 75px;
+   width: 75px;
+   animation: uranus-rotation 37054ms linear infinite;
+}
+
+.saturn-container {
+   position: absolute;
+   height: 600px;
+   width: 600px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;   
+}
+
+.saturn-container > img {
+   height: 75px;
+   width: 75px;
+   animation: saturn-rotation 33218ms linear infinite;
+}
+
+.jupiter-container {
+   position: absolute;
+   height: 500px;
+   width: 500px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;   
+}
+
+.jupiter-container > img {
+   height: 75px;
+   width: 75px;
+   animation: jupiter-rotation 27339ms linear infinite;
+}
+
+.mars-container {
+   position: absolute;
+   height: 400px;
+   width: 400px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;   
+}
+
+.mars-container > img {
+   height: 35px;
+   width: 35px;
+   animation: mars-rotation 12684ms linear infinite;
+}
+
+.earth-container {
+   position: absolute;
+   height: 350px;
+   width: 350px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;   
+}
+
+.earth-container > img {
+   height: 30px;
+   width: 30px;
+   animation: earth-rotation 11079ms linear infinite;
+}
+
+.venus-container {
+   position: absolute;
+   height: 300px;
+   width: 300px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;   
+}
+
+.venus-container > img {
+   height: 20px;
+   width: 20px;
+   animation: venus-rotation 7259ms linear infinite;
+}
+
+.mercury-container {
+   position: absolute;
+   height: 250px;
+   width: 250px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid white;   
+}
+
+.mercury-container > img {
+   height: 15px;
+   width: 15px;
+   animation: mercury-rotation 5768ms linear infinite;
+}
+
+.sun-container {
+   position: absolute;
+   height: 200px;
+   width: 200px;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.sun-container > img {
+   height: 310px;
+   width: 310px;
+   border-radius: 100%;
+   background-color: transparent;
+   pointer-events: none;
+}
+
+
+@keyframes neptune-rotation {
+    
+0% {
+   transform: rotate(0deg) translate(425px) rotate(0deg);
+}
+
+100% {
+   transform: rotate(360deg) translate(425px) rotate(360deg);
+ }
+}
+
+@keyframes uranus-rotation {
+
+0% {
+   transform: rotate(0deg) translate(375px) rotate(0deg);
+}
+   
+100% {
+    transform: rotate(360deg) translate(375px) rotate(360deg);
+ }
+}
+   
+@keyframes saturn-rotation {
+ 
+0% {
+    transform: rotate(0deg) translate(300px) rotate(0deg);
+ }
+      
+100% {
+    transform: rotate(360deg) translate(300px) rotate(360deg);
+  }
+ }
+      
+@keyframes jupiter-rotation {
+
+ 0% {
+ transform: rotate(0deg) translate(250px) rotate(0deg);
+}
+         
+100% {
+ transform: rotate(360deg) translate(250px) rotate(360deg);
+  }
+ }
+         
+ @keyframes mars-rotation {
+
+0% {
+transform: rotate(0deg) translate(200px) rotate(0deg);
+  }
+           
+100% {
+transform: rotate(360deg) translate(200px) rotate(360deg);
+  }
+ }
+            
+ @keyframes earth-rotation {
+
+0% {
+transform: rotate(0deg) translate(175px) rotate(0deg);
+    }
+              
+100% {
+transform: rotate(360deg) translate(175px) rotate(360deg);
+    }
+ }
+               
+ @keyframes venus-rotation {
+
+   0% {
+   transform: rotate(0deg) translate(150px) rotate(0deg);
+       }
+                 
+   100% {
+   transform: rotate(360deg) translate(150px) rotate(360deg);
+       }
+    }
+                  
+               
+ @keyframes mercury-rotation {
+
+   0% {
+   transform: rotate(0deg) translate(125px) rotate(0deg);
+       }
+                 
+   100% {
+   transform: rotate(360deg) translate(125px) rotate(360deg);
+       }
+    }
+
+
+body {
+   padding: 10px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+   background-image: url(img/space-background.jpg);
+   animation: zoom-out 5s ease-in-out forwards;
+ }
+ 
+ .hidden {
+   display: none;
+ }
+ 
+ @keyframes zoom-out {
+   0% {
+     transform: scale(5);
+   }
+   100% {
+     transform: scale(1);
+   }
+ }
+ 
+/* Add this to your existing styles.css */
+#info-modal {
+   scrollbar-width: none;
+   position: fixed;
+   top: 50px;
+   left: 10px;
+   width: 330px;
+   height: 600px;
+   background: rgba(6, 6, 6, 0.817);
+   color: white;
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+   overflow: auto;
+ }
+ 
+ .modal-content {
+   text-align: center;
+   
+ }
+ 
+ 
+ #planet-info img {
+   width: 100%;
+   max-width: 200px;
+   border-radius: 10px;
+   margin-bottom: 10px;
+ }
+ 
+ #planet-info h2 {
+   margin: 10px 0;
+ }
+ 
+ #planet-info p {
+   font-size: 18px;
+   padding: 5px;
+ }
+ 
+ .close {
+   font-size: 24px;
+   font-weight: bold;
+   cursor: pointer;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+ }
+ 
+ .constellation-box {
+   scrollbar-width: thin;
+   position: fixed;
+   top: 50px;
+   right: 10px;
+   width: 300px;
+   height: 90%;
+   background-color: rgba(0, 0, 0, 0.7);
+   padding: 20px;
+   overflow-y: auto;
+   border-radius: 10px;
+}
+
+h2 {
+   color : white;
+   text-align: center;
+   font-size: 24px;
+}
+.constellation-box h2 {
+   background-color:blur;
+   z-index: 1;
+   position: fixed;
+   top:60px;
+   color : white;
+   text-align: center;
+   font-size: 24px;
+}
+
+#search-bar {
+   z-index: 1;
+   position: fixed;
+   top:95px;
+   width: 250px;
+   padding: 10px;
+   margin-bottom: 20px;
+   background-color: rgb(65, 65, 65);
+   border: 1px solid #444;
+   color: white;
+}
+
+#constellation-list {
+   position: relative;
+   top: 85px;
+   list-style-type: none;
+   padding: 0;
+   margin-bottom: 20px;
+}
+
+#constellation-list li {
+   cursor: pointer;
+   padding: 10px;
+   margin: 5px 0;
+   background-color: #444;
+   border-radius: 5px;
+}
+
+#constellation-list li:hover {
+   background-color: #555;
+}
+
+
+
+
+#constellation-name {
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+
+#constellation-image {
+   width: 100%;
+   max-height: 300px;
+   object-fit: cover;
+   margin-bottom: 10px;
+}
+
+#constellation-list p {
+   font-size: 16px;
+   color: #ddd;
+}
+
+
+
+/* Media query for phone screens */
+@media (max-width: 768px) {
+   
+   /* Adjust planet info */
+   #info-modal {
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: auto;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     padding: 10px;
+     box-shadow: none;
+     border-radius: 0;
+   }
+ 
+   #info-modal img {
+     width: 30%;
+     max-width: 100px;
+     margin-right: 10px;
+   }
+ 
+   #info-modal h2, #info-modal p {
+     text-align: left;
+     font-size: 14px;
+   }
+ 
+   /* Adjust solar system */
+   .wrapper {
+      position: relative;
+      top: 236px;
+      left: 30%;
+     flex-direction: column;
+     
+   }
+ 
+   .sun-container {
+     margin: 20px 0;
+     height: 150px;
+     width: 150px;
+   }
+ 
+   .sun-container img {
+     height: 100%;
+     width: 100%;
+   }
+ 
+   .neptune-container,
+   .uranus-container,
+   .saturn-container,
+   .jupiter-container,
+   .mars-container,
+   .earth-container,
+   .venus-container,
+   .mercury-container {
+     border-width: 0.5px;
+   }
+ 
+   /* Constellations horizontal scroll */
+   .constellation-box {
+      position: relative;
+      top: 529px;
+      width: auto;
+      height: 323px;
+     background-color: rgba(0, 0, 0, 0.8);
+     padding: 10px 0;
+     display: flex;
+     flex-direction: column;
+   }
+ 
+   #constellation-list {
+     display: flex;
+     flex-direction: row;
+     gap: 10px;
+     padding: 0 10px;
+     overflow-y: scroll;
+     scrollbar-width: thin;
+   }
+ 
+   #constellation-list::-webkit-scrollbar {
+     height: 6px;
+   }
+ 
+   #constellation-list::-webkit-scrollbar-thumb {
+     background: #555;
+     border-radius: 3px;
+   }
+ 
+   #constellation-list li {
+     flex-shrink: 0;
+     width: 100px;
+     height: 100px;
+     background-color: #444;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 12px;
+     text-align: center;
+   }
+ 
+   #search-bar {
+     width: calc(100% - 20px);
+     margin: 10px auto;
+     display: none; /* Hide search bar on phone for simplicity */
+   }
+ }
+ 
