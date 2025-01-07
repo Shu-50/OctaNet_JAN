@@ -288,7 +288,7 @@ body {
    top: 50px;
    left: 10px;
    width: 330px;
-   height: 600px;
+   height: 650px;
    background: rgba(6, 6, 6, 0.817);
    color: white;
    border-radius: 10px;
@@ -329,6 +329,7 @@ body {
  }
  
  .constellation-box {
+   
    scrollbar-width: thin;
    position: fixed;
    top: 50px;
@@ -349,8 +350,8 @@ h2 {
 .constellation-box h2 {
    background-color:blur;
    z-index: 1;
-   position: fixed;
-   top:60px;
+   /* position: relative;
+   top:60px; */
    color : white;
    text-align: center;
    font-size: 24px;
@@ -358,25 +359,15 @@ h2 {
 
 #search-bar {
    z-index: 1;
-   position: fixed;
-   top:95px;
    width: 250px;
    padding: 10px;
-   margin-bottom: 20px;
+   margin: 8px;
    background-color: rgb(65, 65, 65);
    border: 1px solid #444;
    color: white;
 }
 
-#constellation-list {
-   position: relative;
-   top: 85px;
-   list-style-type: none;
-   padding: 0;
-   margin-bottom: 20px;
-}
-
-#constellation-list li {
+#constellation-list ul {
    cursor: pointer;
    padding: 10px;
    margin: 5px 0;
@@ -388,33 +379,21 @@ h2 {
    background-color: #555;
 }
 
-
-
-
-#constellation-name {
-   font-size: 24px;
-   margin-bottom: 10px;
+#constellation-list  img{
+   width: 225px;
+}
+#constellation-list  h2{
+   font-size: 18px;
 }
 
-#constellation-image {
-   width: 100%;
-   max-height: 300px;
-   object-fit: cover;
-   margin-bottom: 10px;
-}
-
-#constellation-list p {
-   font-size: 16px;
-   color: #ddd;
-}
 
 
 
 /* Media query for phone screens */
 @media (max-width: 768px) {
    
-   /* Adjust planet info */
    #info-modal {
+      z-index: 2;
      top: 0;
      left: 0;
      width: 100%;
@@ -428,21 +407,30 @@ h2 {
    }
  
    #info-modal img {
-     width: 30%;
-     max-width: 100px;
-     margin-right: 10px;
+      width: 77%;
+      max-width: 179px;
+     /* margin-right: 10px; */
    }
  
    #info-modal h2, #info-modal p {
      text-align: left;
      font-size: 14px;
    }
- 
+   #planet-info{
+      display: flex;
+   }
+   #planet-info div{
+      width: 50%;
+   }
+   #planet-info div p{
+      padding: 2px 0px 0 0px;
+      font-size: xx-small;
+   }
+   
    /* Adjust solar system */
    .wrapper {
       position: relative;
-      top: 236px;
-      left: 30%;
+      
      flex-direction: column;
      
    }
@@ -469,52 +457,74 @@ h2 {
      border-width: 0.5px;
    }
  
+   
    /* Constellations horizontal scroll */
    .constellation-box {
+      z-index: 2;
       position: relative;
-      top: 529px;
-      width: auto;
-      height: 323px;
+      top: 260px; 
+      margin-left: 18px;
+      width: -webkit-fill-available;
+      height: 215px;
      background-color: rgba(0, 0, 0, 0.8);
-     padding: 10px 0;
+     padding: 5px 0;
      display: flex;
      flex-direction: column;
+     align-items: center;
+    gap: 2px
    }
  
    #constellation-list {
      display: flex;
-     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     margin-top: 40px;
      gap: 10px;
      padding: 0 10px;
-     overflow-y: scroll;
-     scrollbar-width: thin;
+     overflow-y: hidden;
+     overflow-x: scroll;
+     scrollbar-width: hidden ;
+    
    }
- 
+   
    #constellation-list::-webkit-scrollbar {
-     height: 6px;
+      height: 6px;
    }
  
    #constellation-list::-webkit-scrollbar-thumb {
      background: #555;
      border-radius: 3px;
    }
- 
-   #constellation-list li {
-     flex-shrink: 0;
-     width: 100px;
-     height: 100px;
-     background-color: #444;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-size: 12px;
-     text-align: center;
+
+   #constellation-list img{
+      width: 125px;
+   }
+   #constellation-list h2{
+      display: contents;
+      position: unset;
+      font-size: 10px;
+      
    }
  
    #search-bar {
-     width: calc(100% - 20px);
-     margin: 10px auto;
-     display: none; /* Hide search bar on phone for simplicity */
+     width: 240px;
+     padding:7px;
+     margin-bottom: 4px;
+     border-radius: 5px;
+     background: rgba(0, 0, 0, 0.813);
+     color: white;
+     position: fixed;
    }
- }
+   #search-bar:hover{
+      border: white;
+   }
+
+   .constellation-box h2 {
+      display: none;
+   }
+   .title h1{
+   display: none;
+}
+
+}
  

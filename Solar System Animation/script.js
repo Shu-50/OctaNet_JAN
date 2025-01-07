@@ -105,7 +105,8 @@ function showPlanetInfo(planet) {
   const planetInfo = planetDetails[planet];
   const modalContent = document.getElementById("planet-info");
   modalContent.innerHTML = `
-    <img src="${planetInfo.image}" alt="${planetInfo.name}" />
+    <div><img src="${planetInfo.image}" alt="${planetInfo.name}" /></div>
+    <div>
     <h2>${planetInfo.name}</h2>
     <p><strong>Nickname:</strong> ${planetInfo.nickname}</p>
     <p><strong>Type:</strong> ${planetInfo.type}</p>
@@ -114,6 +115,7 @@ function showPlanetInfo(planet) {
     <p><strong>Distance From Sun:</strong> ${planetInfo.distanceFromSun} MILLION KM</p>
     <p><strong>Atmosphere:</strong> ${planetInfo.atmosphere}</p>
     <p><strong>Fact:</strong> ${planetInfo.fact}</p>
+    </div>
     `;
   
 }
@@ -232,36 +234,20 @@ const imageFiles =[
 
 // Function to display images and their names
 async function displayConstellations() {
-    constellationList.innerHTML = ''; // Clear existing list
-    // imageFiles = await fetch('stars')
-    imageFiles.forEach(imageFile => {
-        // Extract name from file name
-        const name = imageFile.replace('.jpg', '').replace('_', ' ').toUpperCase();
+  constellationList.innerHTML = '';
 
-        // Create a container for the image and name
-        const container = document.createElement('div');
-        container.style.textAlign = 'center';
-        container.style.marginBottom = '20px';
+  // Iterate over each image file and generate the HTML for it
+  imageFiles.forEach(imageFile => {
+      // Extract the constellation name from the file name
+      const name = imageFile.replace('.jpg', '').replace(/_/g, ' ').toUpperCase();
 
-        // Create an image element
-        const img = document.createElement('img');
-        img.src = `${imageFolder}${imageFile}`;
-        img.alt = name;
-        img.style.width = '200px';
-        img.style.height = 'auto';
-        img.style.display = 'block';
-        img.style.margin = '0 auto';
-
-        // Create a label for the name
-        const label = document.createElement('p');
-        label.textContent = name;
-
-        // Append the image and label to the container
-        container.appendChild(img);
-        container.appendChild(label);
-
-        // Append the container to the list
-        constellationList.appendChild(container);
+      // Append the image and name to the `constellationList` element
+      constellationList.innerHTML += `
+          <div style="text-align: center; ">
+              <img src='${imageFolder}${imageFile}' alt='${name}' " />
+              <h2 style="text-align: center;">${name}</h2>
+          </div>
+      `;
     });
 }
 
